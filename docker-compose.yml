@@ -1,0 +1,18 @@
+red:
+  build: .
+  ports:
+    - "2880:1880"
+  volumes:
+    - ./src:/data
+  #   - ./public:/home/nol/node-red-static
+  links:
+    - mongodb
+    - mqtt
+mqtt:
+  image: eclipse-mosquitto:1.6.12
+  ports:
+    - "1883:1883"
+mongodb:
+  ports:
+    - "27017:27017"
+  image: mongo
