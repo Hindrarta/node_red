@@ -1,20 +1,20 @@
-version: "3"
+version: "3.2"
 
 services:
   red:
-    build: .
-    container_name: node-red
+    image: nodered/node-red
+    container_name: hindrarta-node-red-1.0
     ports:
       - 1880:1880
     volumes:
       - ./data:/data
     #   - ./public:/home/nol/node-red-static
-    links:
+    # links:
       # - mongodb
-      - mqtt
+      # - mqtt
   mqtt:
     image: eclipse-mosquitto:1.6.12
-    container_name: mqtt-broker
+    container_name: hindrarta-mqtt-broker-1.0
     ports:
       - 1883:1883
   # mongodb:
@@ -26,7 +26,7 @@ services:
   #     - ./db:/data/db
   #   restart: unless-stopped
 
-networks:
-  app-networks:
-    external:
-      name: nodered_default
+# networks:
+#   app-networks:
+#     external:
+#       name: nodered_default

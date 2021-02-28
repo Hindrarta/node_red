@@ -1,2 +1,2 @@
-src/node_modules
-Dockerfile
+**/node_modules
+src/settings.js
