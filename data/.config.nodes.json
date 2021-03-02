@@ -395,7 +395,7 @@
     "node-red-dashboard": {
         "name": "node-red-dashboard",
         "version": "2.28.1",
-        "local": false,
+        "local": true,
         "nodes": {
             "ui_base": {
                 "name": "ui_base",
@@ -612,7 +612,7 @@
     "node-red-mongodb": {
         "name": "node-red-mongodb",
         "version": "0.0.18",
-        "local": false,
+        "local": true,
         "nodes": {
             "mongo": {
                 "name": "mongo",
